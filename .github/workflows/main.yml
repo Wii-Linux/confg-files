@@ -28,4 +28,4 @@ jobs:
      run: ssh root@wii-linux.org  'cd /srv/other/config-files; git pull'
 
    - name: Deploy in web
-     run: ssh root@wii-linux.org  'cd /srv/other/config-files; tar c * | pigz -c9n > /srv/www/wii-linux.org/site/latest-configs.tar.gz'
+     run: ssh root@wii-linux.org  'cd /srv/other/config-files; tar c * --exclude LICENSE | pigz -c9n > /srv/www/wii-linux.org/site/latest-configs.tar.gz'
